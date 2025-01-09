@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "1427766c-1640-4528-be67-4c2f9b89ca38",
+		"name": "NODE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38164296",
+		"_collection_link": "https://bhk999.postman.co/workspace/PAGE1TRAVELS~96e91265-58b3-4679-ad60-b4be14ce08c5/collection/38164296-1427766c-1640-4528-be67-4c2f9b89ca38?action=share&source=collection_link&creator=38164296"
+	},
+	"item": [
+		{
+			"name": "getALL POST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/posts?page=1&limit=1&sort=DESC&searchQuery=This&tag=git",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "sort",
+							"value": "DESC"
+						},
+						{
+							"key": "searchQuery",
+							"value": "This"
+						},
+						{
+							"key": "tag",
+							"value": "git"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "NODEJS NOTESs",
+							"type": "text"
+						},
+						{
+							"key": "descrption",
+							"value": "THIS TOPIC IS FOR NODE JS",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1ef70ca6-b06b-40c0-8757-d1f0971f3d77"
+						},
+						{
+							"key": "tags",
+							"value": "NODE JS",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "EXPRESS JS",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get ALL TAG",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/tag",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create TAG",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tagName\":\"Express JS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tag",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tag"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
