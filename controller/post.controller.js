@@ -1,6 +1,6 @@
 import TagModel from "../models/tag.model.js";
 import PostModel from "../models/post.model.js";
-// import s3FileUpload from '../utils/s3.imageupload.js';
+import s3FileUpload from '../utils/s3.imageupload.js';
 import { createTagService } from './tag.controller.js';
 
 const getPosts = async (req, res) => {
@@ -47,9 +47,9 @@ const createPost = async (req, res) => {
 
         
         let s3FIleLocation;
-        // if (file && file.buffer && file.originalname) {
-        //     s3FIleLocation = await s3FileUpload(file.buffer, file.originalname);
-        // }
+        if (file && file.buffer && file.originalname) {
+            s3FIleLocation = await s3FileUpload(file.buffer, file.originalname);
+        }
 
        
         
